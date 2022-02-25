@@ -36,6 +36,23 @@
                 </div>
                 <a class="mx-3" href="#"><ion-icon name="chatbubbles-outline" size="large"></ion-icon></a>
                 <a class="mx-3" href="#"><ion-icon name="notifications-outline" size="large"></ion-icon></a>
+                <div class="dropdown">
+                    <button class="buttonDropDown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <ion-icon name="caret-down-outline" size="large"></ion-icon>
+                    </button>
+                    <ul class="dropdown-menu dropdown-area" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <div class="d-flex select px-3 py-1">
+                                <img src="/assets/img/inuyasa.png" class="profile-photo" width="30px" height="30px" alt="">
+                                <p class="fw-bold ms-2">Riki</p>
+                            </div>
+                        </li>
+                        <hr>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><ion-icon name="chatbubble-outline" size="large" class="me-3"></ion-icon>Messages</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><ion-icon name="settings-outline" size="large" class="me-3"></ion-icon>Setting</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><ion-icon name="log-out-outline" size="large" class="me-3"></ion-icon>Logout</a></li>
+                    </ul>
+                  </div>
             </div>
           
         </div>
@@ -135,9 +152,9 @@
                           <img src="/assets/img/inuyasa.png" class="profile-photo" width="55px" height="55px" alt="">
                     </div>
                     <div class="col-10">
-                          <form class="d-flex">
-                              <input class="form-control me-2 search-bar" type="text" placeholder="Apa yang Anda pikirkan?" aria-label="Search">
-                          </form>
+                        <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#status-dialog">
+                            Hai Riki, apa yang anda pikirkan?
+                        </button>
                     </div>
                 </div>
                 <hr>
@@ -153,7 +170,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="row select">
+                        <div class="row select" data-bs-toggle="modal" data-bs-target="#status-dialog">
                             <div class="col-2">
                                 <ion-icon name="images-outline"></ion-icon>
                             </div>
@@ -164,6 +181,36 @@
                     </div>
                 </div>
               </div>
+          </div>
+          <div class="modal fade" id="status-dialog" tabindex="-1" aria-labelledby="status-dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title fw-bold w-100 text-center" id="status-dialog">Buat Postingan</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex select px-3 py-1">
+                        <img src="/assets/img/inuyasa.png" class="profile-photo" width="30px" height="30px" alt="">
+                        <p class="fw-bold ms-2">Riki</p>
+                    </div>
+                    <form action="#">
+                        <textarea class="form-control" placeholder="Apa yang anda pikirkan, Riki?" id="floatingTextarea2" style="height: 120px; border: 0; resize: none;"></textarea>
+                    </form>
+                    <div class="row" style="padding: 10px; border: 1px solid #c3c3c3; margin: 5px;">
+                        <div class="col-2">
+                            <ion-icon name="images-outline"></ion-icon>
+                        </div>
+                        <div class="col-10 fw-bold">
+                            Foto/Video
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary w-100">Kirim</button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="post-section w-100 d-flex justify-content-center my-3 ">
               <div class="w-75 background shadow-sm">
